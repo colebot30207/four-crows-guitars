@@ -1,0 +1,59 @@
+# The Four Crows Guitars — website
+
+Static marketing site for [The Four Crows Guitars](https://reverb.com/shop/thefourcrows), Doylestown PA.
+Nothing is sold here; every "Shop on Reverb" button links to the Reverb shop.
+
+Plain HTML + CSS + a little vanilla JS. No build step. `index.html` is at the repo root so Porkbun Static Hosting can serve it directly.
+
+```
+index.html          the whole site (one page)
+styles.css          styles (phone-first)
+script.js           mobile menu, footer year, "photo coming soon" fallback tiles
+robots.txt / sitemap.xml
+assets/logo/        black + white logo PNGs (+ original PDFs)
+assets/img/         favicons, apple-touch-icon, og-image.jpg (share image)
+assets/photos/      guitar photos (WebP) — see below
+tools/optimize-photos.py   makes the WebP sizes from originals
+```
+
+## Adding / editing a guitar card
+
+1. Put the original photo in `assets/photos/originals/` named `guitar-01.jpg` … `guitar-10.jpg` (and `hero.jpg` for the big hero image). Originals are git-ignored.
+2. Run the optimizer (needs Python 3 + Pillow: `python3 -m pip install pillow`):
+
+   ```bash
+   python3 tools/optimize-photos.py
+   ```
+
+   It writes `guitar-01.webp`, `guitar-01-800.webp` and `guitar-01-480.webp` (max 1600px wide) into `assets/photos/`.
+3. In `index.html`, find the matching `<li class="card">` and change:
+   - the `<h3>` text → guitar name
+   - the `alt="…"` → one-line description of the guitar
+4. Commit and push. Done.
+
+Until a photo file exists, the card shows a "Photo coming soon" tile automatically. To add an 11th guitar, copy a whole `<li class="card">…</li>` block and bump the number.
+
+Search `PLACEHOLDER` in `index.html` for everything still waiting on real content (About paragraph, contact email, guitar names).
+
+## Deploying
+
+Hosting is Porkbun Static Hosting connected to this GitHub repo (GitHub Connect). Every push to `main` is deployed; there is nothing to build.
+
+```bash
+git add -A
+git commit -m "Update guitar cards"
+git push
+```
+
+Local preview (any static server works):
+
+```bash
+python3 -m http.server 8921
+```
+
+then open <http://localhost:8921>.
+
+## Before going live
+
+- Replace `https://www.thefourcrowsguitars.com/` in `index.html`, `sitemap.xml` and `robots.txt` with the real domain if it differs.
+- Fill the `PLACEHOLDER` items.
