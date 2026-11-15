@@ -37,13 +37,21 @@ Search `PLACEHOLDER` in `index.html` for everything still waiting on real conten
 
 ## Deploying
 
-Hosting is Porkbun Static Hosting connected to this GitHub repo (GitHub Connect). Every push to `main` is deployed; there is nothing to build.
+Live at <https://thefourcrowsguitars.com> (domain registered at Porkbun, hosted on Netlify — site `four-crows-guitars`, site id `0ce44339-d5a4-4ce8-9898-a3f64e916bc4`). Porkbun DNS: ALIAS apex → `apex-loadbalancer.netlify.com`, CNAME `www` → `four-crows-guitars.netlify.app`. Let's Encrypt cert auto-renews; HTTPS is forced.
+
+Deploys are pushed from this folder with the Netlify CLI (no build step):
 
 ```bash
 git add -A
 git commit -m "Update guitar cards"
 git push
 ```
+
+```bash
+npx -y netlify-cli deploy --prod --dir . --site 0ce44339-d5a4-4ce8-9898-a3f64e916bc4
+```
+
+Optional: link the GitHub repo in the Netlify dashboard (Project configuration → Build & deploy → Link repository) and every push to `main` deploys on its own; the CLI step is then unnecessary.
 
 Local preview (any static server works):
 
@@ -53,7 +61,6 @@ python3 -m http.server 8921
 
 then open <http://localhost:8921>.
 
-## Before going live
+## Still to fill
 
-- Replace `https://www.thefourcrowsguitars.com/` in `index.html`, `sitemap.xml` and `robots.txt` with the real domain if it differs.
-- Fill the `PLACEHOLDER` items.
+- `PLACEHOLDER` items in `index.html`: About paragraph from Philip, contact email.
