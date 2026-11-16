@@ -8,7 +8,7 @@ Plain HTML + CSS + a little vanilla JS. No build step. `index.html` is at the re
 ```
 index.html          the whole site (one page)
 styles.css          styles (phone-first)
-script.js           mobile menu, footer year, "photo coming soon" fallback tiles
+script.js           mobile menu, footer year, (no fallback tiles any more — every card needs a photo)
 robots.txt / sitemap.xml
 assets/logo/        black + white logo PNGs (+ original PDFs)
 assets/img/         favicons, apple-touch-icon, og-image.jpg (share image)
@@ -31,7 +31,7 @@ tools/optimize-photos.py   makes the WebP sizes from originals
    - the `alt="…"` → one-line description of the guitar
 4. Commit and push. Done.
 
-Until a photo file exists, the card shows a "Photo coming soon" tile automatically. To add a 13th guitar, copy a whole `<li class="card">…</li>` block and bump the number.
+To add a 13th guitar, copy a whole `<li class="card">…</li>` block and bump the number.
 
 ## Deploying
 

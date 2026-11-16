@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Four Crows Guitars — Boutique Guitars, Doylestown PA</title>
   <meta name="description" content="The Four Crows Guitars is a boutique online guitar shop in Doylestown, Pennsylvania. Thoughtfully selected instruments with character, quality and value — shop the collection on Reverb.">
-  <link rel="canonical" href="https://www.thefourcrowsguitars.com/">
+  <link rel="canonical" href="https://thefourcrowsguitars.com/">
   <meta name="theme-color" content="#0e0d0b">
 
   <!-- Open Graph / Twitter -->
@@ -13,14 +13,14 @@
   <meta property="og:site_name" content="The Four Crows Guitars">
   <meta property="og:title" content="The Four Crows Guitars — Boutique Guitars, Doylestown PA">
   <meta property="og:description" content="Thoughtfully selected guitars with character, quality and value. Shop the collection on Reverb.">
-  <meta property="og:url" content="https://www.thefourcrowsguitars.com/">
-  <meta property="og:image" content="https://www.thefourcrowsguitars.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://thefourcrowsguitars.com/">
+  <meta property="og:image" content="https://thefourcrowsguitars.com/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Four Crows Guitars">
   <meta name="twitter:description" content="Thoughtfully selected guitars with character, quality and value. Shop the collection on Reverb.">
-  <meta name="twitter:image" content="https://www.thefourcrowsguitars.com/assets/img/og-image.jpg">
+  <meta name="twitter:image" content="https://thefourcrowsguitars.com/assets/img/og-image.jpg">
 
   <!-- Icons -->
   <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32">
@@ -30,18 +30,20 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@1,400&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@1,400&family=Inter:wght@400;500;600&display=swap"></noscript>
 
   <link rel="stylesheet" href="/styles.css">
+  <link rel="preload" as="image" href="/assets/photos/hero.webp" imagesrcset="/assets/photos/hero-480.webp 480w, /assets/photos/hero-800.webp 800w, /assets/photos/hero.webp 1199w" imagesizes="100vw" fetchpriority="high">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MusicStore",
     "name": "The Four Crows Guitars",
-    "url": "https://www.thefourcrowsguitars.com/",
-    "logo": "https://www.thefourcrowsguitars.com/assets/logo/four-crows-stacked-black.png",
-    "image": "https://www.thefourcrowsguitars.com/assets/img/og-image.jpg",
+    "url": "https://thefourcrowsguitars.com/",
+    "logo": "https://thefourcrowsguitars.com/assets/logo/four-crows-stacked-black.png",
+    "image": "https://thefourcrowsguitars.com/assets/img/og-image.jpg",
     "description": "Boutique online guitar shop based in Doylestown, Pennsylvania.",
     "address": { "@type": "PostalAddress", "addressLocality": "Doylestown", "addressRegion": "PA", "addressCountry": "US" },
     "sameAs": ["https://reverb.com/shop/thefourcrows"]
@@ -73,13 +75,12 @@
     <!-- ================= HERO ================= -->
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
-        <!-- Hero photo: assets/photos/hero.webp (currently the Martin D-18E). If the file is missing the crow mark is shown instead. -->
-        <img class="hero-photo" src="/assets/photos/hero.webp" srcset="/assets/photos/hero-800.webp 800w, /assets/photos/hero.webp 1199w" sizes="100vw" alt="" width="1199" height="1312" fetchpriority="high">
+        <!-- Hero photo: assets/photos/hero.webp (currently the Martin D-18E). -->
+        <img class="hero-photo" src="/assets/photos/hero.webp" srcset="/assets/photos/hero-480.webp 480w, /assets/photos/hero-800.webp 800w, /assets/photos/hero.webp 1199w" sizes="100vw" alt="" width="1199" height="1312" fetchpriority="high">
       </div>
       <div class="wrap hero-inner">
-        <p class="eyebrow">Doylestown, Pennsylvania</p>
         <h1>Guitars with<br>character.</h1>
-        <p class="lede">Thoughtfully selected instruments that offer exceptional character, quality and value — for seasoned players, collectors, and anyone just starting out.</p>
+        <p class="lede">A small, hand-picked collection, sold through our Reverb shop.</p>
         <div class="hero-actions">
           <a class="btn btn-solid" href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">Shop on Reverb <span aria-hidden="true">↗</span></a>
           <a class="btn btn-ghost" href="#collection">See the collection</a>
@@ -92,7 +93,6 @@
       <div class="wrap">
         <div class="section-head">
           <h2>The Collection</h2>
-          <p>Every guitar below is sold through our Reverb shop. Tap a card to open the shop in a new tab.</p>
         </div>
 
         <!--
@@ -100,56 +100,55 @@
           1. Put the photo at assets/photos/guitar-NN.webp (run tools/optimize-photos.py to make the WebP + small sizes).
           2. Change the <h3> text to the guitar's name.
           3. Update the alt text to describe the guitar.
-          Cards show a placeholder tile until the image file exists.
         -->
         <ul class="grid" id="guitar-grid">
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-01.webp" srcset="/assets/photos/guitar-01-480.webp 480w, /assets/photos/guitar-01-800.webp 800w, /assets/photos/guitar-01.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Martin D-18E acoustic guitar leaning on a bar stool" width="1199" height="1312"></figure>
-            <h3>Martin D-18E</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Martin D-18E</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-02.webp" srcset="/assets/photos/guitar-02-480.webp 480w, /assets/photos/guitar-02-800.webp 800w, /assets/photos/guitar-02.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Jimi Hendrix Flying V electric guitar with psychedelic finish" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Jimi Hendrix Flying V</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Jimi Hendrix Flying V</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-03.webp" srcset="/assets/photos/guitar-03-480.webp 480w, /assets/photos/guitar-03-800.webp 800w, /assets/photos/guitar-03.webp 1122w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Red Gretsch Thunderbird electric guitar" loading="lazy" width="1122" height="1402"></figure>
-            <h3>Gretsch Thunderbird</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Gretsch Thunderbird</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-04.webp" srcset="/assets/photos/guitar-04-480.webp 480w, /assets/photos/guitar-04-800.webp 800w, /assets/photos/guitar-04.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Dobro resonator guitar with nickel body" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Dobro Resonator</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Dobro Resonator</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-05.webp" srcset="/assets/photos/guitar-05-480.webp 480w, /assets/photos/guitar-05-800.webp 800w, /assets/photos/guitar-05.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Joe Strummer Telecaster with worn black finish" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Joe Strummer Telecaster</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Joe Strummer Telecaster</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-06.webp" srcset="/assets/photos/guitar-06-480.webp 480w, /assets/photos/guitar-06-800.webp 800w, /assets/photos/guitar-06.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Red Airline Jetsons 2P electric guitar" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Airline Jetsons 2P</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Airline Jetsons 2P</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-07.webp" srcset="/assets/photos/guitar-07-480.webp 480w, /assets/photos/guitar-07-800.webp 800w, /assets/photos/guitar-07.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="White John 5 Ghost Telecaster" loading="lazy" width="1199" height="1312"></figure>
-            <h3>John 5 Ghost Telecaster</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>John 5 Ghost Telecaster</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-08.webp" srcset="/assets/photos/guitar-08-480.webp 480w, /assets/photos/guitar-08-800.webp 800w, /assets/photos/guitar-08.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Green Burns Steer electric guitar" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Burns Steer Guitar</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Burns Steer Guitar</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-09.webp" srcset="/assets/photos/guitar-09-480.webp 480w, /assets/photos/guitar-09-800.webp 800w, /assets/photos/guitar-09.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Dean resonator guitar with mahogany body" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Dean Resonator</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Dean Resonator</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-10.webp" srcset="/assets/photos/guitar-10-480.webp 480w, /assets/photos/guitar-10-800.webp 800w, /assets/photos/guitar-10.webp 1199w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Red and cream Fender So-Cal Stratocaster" loading="lazy" width="1199" height="1312"></figure>
-            <h3>Fender So-Cal Stratocaster</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Fender So-Cal Stratocaster</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-11.webp" srcset="/assets/photos/guitar-11-480.webp 480w, /assets/photos/guitar-11-800.webp 800w, /assets/photos/guitar-11.webp 1122w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="White Supro Dual Tone electric guitar with Bigsby tailpiece" loading="lazy" width="1122" height="1402"></figure>
-            <h3>Supro Dual Tone</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Supro Dual Tone</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
           <li class="card"><a href="https://reverb.com/shop/thefourcrows" target="_blank" rel="noopener">
             <figure><img src="/assets/photos/guitar-12.webp" srcset="/assets/photos/guitar-12-480.webp 480w, /assets/photos/guitar-12-800.webp 800w, /assets/photos/guitar-12.webp 1122w" sizes="(min-width: 1100px) 22vw, (min-width: 700px) 30vw, 46vw" alt="Red, white and blue Buck Owens American acoustic guitar" loading="lazy" width="1122" height="1402"></figure>
-            <h3>Buck Owens American</h3><span class="card-cta">View on Reverb <span aria-hidden="true">↗</span></span>
+            <h3>Buck Owens American</h3><span class="sr-only">(opens Reverb)</span>
           </a></li>
         </ul>
 
@@ -160,22 +159,14 @@
     <!-- ================= ABOUT ================= -->
     <section class="about" id="about">
       <div class="wrap about-inner">
-        <div class="about-logo">
-          <img src="/assets/logo/four-crows-stacked-white.png" alt="The Four Crows Guitars crest" width="900" height="1316" loading="lazy">
-        </div>
         <div class="about-copy">
           <h2>About The Four Crows</h2>
           <p>The Four Crows Guitars is a boutique online guitar shop based in historic Doylestown, Pennsylvania. Driven by a passion for great guitars and the music they inspire, we specialize in thoughtfully selected instruments that offer exceptional character, quality and value.</p>
-          <p>Whether you're a seasoned player, a collector, or just beginning your musical journey, The Four Crows is dedicated to helping you find your next great guitar.</p>
+          <p>Whether you're a seasoned player, a collector, or just beginning your musical journey, The Four Crows is dedicated to helping you find your next great guitar. More than 175 transactions on Reverb so far, with 100% positive feedback.</p>
           <blockquote class="pull-quote">
             <p>“If you don't know the blues… there's no point in picking up the guitar and playing rock and roll or any other form of popular music.”</p>
             <cite>— Keith Richards</cite>
           </blockquote>
-          <ul class="facts">
-            <li><strong>100%</strong> positive Reverb feedback</li>
-            <li><strong>175+</strong> Reverb transactions</li>
-            <li><strong>Doylestown, PA</strong></li>
-          </ul>
         </div>
       </div>
     </section>
