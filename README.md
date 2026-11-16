@@ -18,7 +18,7 @@ tools/optimize-photos.py   makes the WebP sizes from originals
 
 ## Adding / editing a guitar card
 
-1. Put the original photo in `assets/photos/originals/` named `guitar-01.jpg` … `guitar-10.jpg` (and `hero.jpg` for the big hero image). Originals are git-ignored.
+1. Put the original photo in `assets/photos/originals/` named `guitar-01.jpg` … `guitar-12.jpg` (and `hero.jpg` for the big hero image). Originals are git-ignored.
 2. Run the optimizer (needs Python 3 + Pillow: `python3 -m pip install pillow`):
 
    ```bash
@@ -31,9 +31,7 @@ tools/optimize-photos.py   makes the WebP sizes from originals
    - the `alt="…"` → one-line description of the guitar
 4. Commit and push. Done.
 
-Until a photo file exists, the card shows a "Photo coming soon" tile automatically. To add an 11th guitar, copy a whole `<li class="card">…</li>` block and bump the number.
-
-Search `PLACEHOLDER` in `index.html` for everything still waiting on real content (About paragraph, contact email, guitar names).
+Until a photo file exists, the card shows a "Photo coming soon" tile automatically. To add a 13th guitar, copy a whole `<li class="card">…</li>` block and bump the number.
 
 ## Deploying
 
@@ -61,6 +59,6 @@ python3 -m http.server 8921
 
 then open <http://localhost:8921>.
 
-## Still to fill
+## Netlify badge
 
-- `PLACEHOLDER` items in `index.html`: About paragraph from Philip, contact email.
+The free-plan "Powered by Netlify" badge is switched off via the site setting `built_with_badge_enabled: false` (set with `netlify api updateSite`).
